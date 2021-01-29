@@ -52,7 +52,7 @@ class help(commands.Cog):
         first_run = True
         while True:
             if first_run:
-                page1 = discord.Embed(title='Page 1/7', description='Description1', colour=discord.Colour.orange())
+                page1 = discord.Embed(title='Page 1/7', description='Description1',  color=0x5d00ff)
                 page1.add_field(name="**Helpコマンド2**", value="Moderation")
                 page1.add_field(name="**Helpコマンド3**", value="Information")
                 page1.add_field(name="**Helpコマンド4**", value="Admin")
