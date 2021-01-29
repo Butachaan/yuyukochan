@@ -15,6 +15,7 @@ bot.load_extension('jishaku')
 bot.load_extension('ext.info')
 bot.load_extension('ext.admin')
 bot.load_extension('ext.other')
+bot.load_extension('ext.moderation')
 
 @bot.event
 async def on_command(ctx):
