@@ -16,6 +16,7 @@ bot.load_extension('ext.info')
 bot.load_extension('ext.admin')
 bot.load_extension('ext.other')
 bot.load_extension('ext.moderation')
+bot.load_extension('ext.report')
 
 @bot.event
 async def on_command(ctx):
