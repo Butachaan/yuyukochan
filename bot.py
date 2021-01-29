@@ -14,6 +14,7 @@ developer = f.bot_developers
 bot.load_extension('jishaku')
 bot.load_extension('ext.info')
 bot.load_extension('ext.admin')
+bot.load_extension('ext.other')
 
 @bot.event
 async def on_command(ctx):
