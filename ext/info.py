@@ -69,15 +69,15 @@ class infoCog(commands.Cog):
             return string[:1000]  # The maximum allowed charcter amount for embed fields
 
     @commands.command(name="serverinfo", aliases=["si"], description="```サーバーの情報```")
-    async def serverinfo(self, ctx, *, guild_id: int = None):
+    async def serverinfo(self, ctx, *, guild_id: int = None,arg):
         """カスさんサーバー情報"""
 
         if guild_id is not None and await self.bot.is_owner(ctx.author):
-            guild = self.bot.get_guild(guild_id)
+            guild = self.bot.get_guild(int(arg))
             if guild is None:
                 return await ctx.send(f'Invalid Guild ID given.')
         else:
-            guild = ctx.guild
+            guild = ctx.bot.get_guild(int(arg))
             statuses = [len(list(filter(lambda m: str(m.status) == "online", guild.members))),
                         len(list(filter(lambda m: str(m.status) == "idle", guild.members))),
                         len(list(filter(lambda m: str(m.status) == "dnd", guild.members))),
