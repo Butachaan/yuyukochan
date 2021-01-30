@@ -117,6 +117,11 @@
 	bottom: 0;
 	left: 0;
 }
+iframe {
+  width: 40%; /* 親要素の幅と合わせる */
+  height: 400px;
+  border: none;
+}
 .cp_sidebarmenu ul li i {
 	font-size: 1.5em;
 	display: inline-block;
@@ -161,6 +166,9 @@
 	background: #f4f4f4;
 	list-style: none;
 }
+html{
+  scroll-behavior: smooth;
+}
 .cp_menu li {
 	overflow-y: hidden;
 	max-height: 0;
@@ -172,10 +180,36 @@
 	max-height: 46px;
 	opacity: 1;
 }
+body {
+  padding: 1rem;
+    margin: 0 auto;
+}
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+tr:nth-child(even) {
+  background: #f1f7f8;
+}
+th,
+td {
+  border: 1px solid #a0c8cf;
+  padding: .75rem;
+  text-align: center;
+}
+th {
+  background: #74afb9;
+  color: #fff;
+}
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
     </style>
-    <style>
 
-    </style>
 </head>
 <body>
     <div class="main">
@@ -306,7 +340,9 @@
 <p>
 <input type="submit" value="送信"><input type="reset" value="リセット">
 </p>
+
 </form>
+
 <form>
     <div class="wish">
 <h3>運営審査</h3>
@@ -333,5 +369,31 @@
 
 </form>
 
+    <table>
+  <tr>
+    <th>名前</th>
+    <th>出身地</th>
+    <th>誕生日</th>
+    <th>メールアドレス</th>
+  </tr>
+  <tr>
+    <td>西瓜 夏美</td>
+    <td>熊本</td>
+    <td>7月20日</td>
+    <td>natsu0707@example.com</td>
+  </tr>
+  <tr>
+    <td>桃山 太郎</td>
+    <td>岡山</td>
+    <td>5月1日</td>
+    <td>momo@example.com</td>
+  </tr>
+  <tr>
+    <td>桜桃 智絵里</td>
+    <td>山形</td>
+    <td>12月31日</td>
+    <td>cherry-sweet@example.com</td>
+  </tr>
+</table>
 </body>
 </html>
