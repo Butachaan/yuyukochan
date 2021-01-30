@@ -81,6 +81,11 @@ class everyone(commands.Cog):
         else:
             await ctx.send(arg)
 
+    @commands.command(name="source")
+    async def source(self,ctx):
+        embed = discord.Embed(title="ソースコード",description="https://github.com/Butachaan/yuyukochan")
+        await ctx.send(embed=embed)
+
     @commands.command(name="invite", description="botの招待リンクを表示します")
     async def invite(self, ctx):
         """`誰でも`"""

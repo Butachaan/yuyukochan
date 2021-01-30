@@ -140,6 +140,7 @@ async def on_ready():
     print("Bot is ready!")
 
 
+
 @bot.event
 async def on_command_error(ctx, error):
     ch = 799505924280156192
