@@ -110,6 +110,7 @@ bot = commands.Bot(command_prefix="y/", help_command=Help(), description="```y/h
 
 developer = f.bot_developers
 
+
 bot.load_extension('ext.info')
 bot.load_extension('ext.admin')
 bot.load_extension('ext.other')
@@ -134,7 +135,7 @@ async def on_command(ctx):
 
 @bot.event
 async def on_ready():
-    activity = discord.Game(name="y/helps", type=3)
+    activity = discord.Game(name="y/helpsで確認", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
     print("Bot is ready!")
 
