@@ -3,13 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <title>幽々子</title>
+    <style>
+        body {
+        color:purple;
+        background-color: lightblue;
+        font-size: 15px
+    }
+    </style>
+    <style>
+        .main {
+
+        }
+        .kinou {
+        border: double 5px gray;
+        }
+        .機能{
+          width: 100%;
+          max-width: 500px;
+          font-weight: bold;
+        }
+        .l_toc {
+        width: 95%;
+        max-width: 500px;
+        background-color: white;
+        position: relative;
+        top: 38px;
+        left: 0;
+        }
+
+        .l_toc label {
+        background-color: tan;
+        padding: 10px;
+        position: absolute;
+        top: -40px;
+        left: 0;
+         }
+        h2 {
+  /*線の種類（二重線）太さ 色*/
+  border-bottom: double 5px #FFC778;
+         }
+          h3 {
+  /*線の種類（二重線）太さ 色*/
+  border-bottom: double 5px #FFC778;
+         }
+         .connect{
+
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+}
+
+    </style>
+    <style>
+
+    </style>
 </head>
 <body>
-<p>幽々子BOT</p>
-<a href="https://www.yuyuko-sv.xyz/">
-    <img src="https://cdn.discordapp.com/avatars/757807145264611378/f6e2d7ff1f8092409983a77952670eae.png?size=1024" alt="yuyuko"/>
+    <div class="main">
+    <h1>幽々子Bot</h1>
+    <s>これは<span class="light">例</span>です</s>
+    <s>
+    <a href="https://www.yuyuko-sv.xyz/">ホームページ</a>
+    はこちらへ</s>
+    <img src="https://cdn.discordapp.com/avatars/757807145264611378/f6e2d7ff1f8092409983a77952670eae.png?size=1024">
+    </div>
 
-</a>
+<div class="l_toc">
+    <h2>機能一覧</h2>
+
+    <ol class="toc_container">
+        <li><a href="#">Information</a>
+            <ol>
+                <li><a href="#">userinfo (u</a></li>
+                <li><a href="#">serverinfo</a></li>
+                <li><a href="#">roleinfo</a></li>
+                <li><a href="#">messagerinfo</a></li>
+                <li><a href="#">channelinfo</a></li>
+                <li><a href="#">avatar</a></li>
+            </ol>
+        </li>
+        <li><a href="#">Moderation</a>
+            <ol>
+                <li><a href="#">kick</a></li>
+                <li><a href="#">ban</a></li>
+                <li><a href="#">hackban</a></li>
+                <li><a href="#">banlist</a></li>
+                <li><a href="#">baninfo</a></li>
+                <li><a href="#">unban</a></li>
+                <li><a href="#">addrole</a></li>
+                <li><a href="#">removerole</a></li>
+                <li><a href="#">mute</a></li>
+                <li><a href="#">unmute</a></li>
+                <li><a href="#">poll</a></li>
+                <li><a href="#">slowmode</a></li>
+            </ol>
+        </li>
+        <li><a href="#">everyone</a>
+            <ol>
+                <li><a href="#">invite</a></li>
+                <li><a href="#">official</a></li>
+                <li><a href="#">ping</a></li>
+                <li><a href="#">say</a></li>
+                <li><a href="#">timer</a></li>
+            </ol>
+        </li>
+        <li><a href="#">report</a>
+            <ol>
+                <li><a href="#">request</a></li>
+                <li><a href="#">bug</a></li>
+                <li><a href="#">feedbaack</a></li>
+            </ol>
+        </li>
+    </ol>
+</div>
+
+<div class="connect">
+<h3>お問い合わせ</h3>
+<form action="cgi-bin/formmail.cgi" method="post">
+<p>
+名前：<input type="text" name="name" size="40">
+</p>
+<p>
+性別：<input type="radio" name="sex" value="male">男
+<input type="radio" name="sex" value="female">女
+</p>
+<p>
+血液型：<select name="blood">
+<option value="A">A型</option>
+<option value="B">B型</option>
+<option value="O">O型</option>
+<option value="AB">AB型</option>
+</select>
+</p>
+<p>
+デバイス:<select name="device">
+    <option value="PC">パソコン</option>
+    <option value="phone">スマホ</option>
+    <option value="IPad">タブレッド</option>
+
+</select>
+</p>
+<p>
+ご感想：<br>
+<textarea name="kanso" rows="4" cols="40"></textarea>
+</p>
+<p>
+<input type="submit" value="送信"><input type="reset" value="リセット">
+</p>
+</form>
 
 </body>
 </html>
