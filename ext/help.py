@@ -165,6 +165,7 @@ class help(commands.Cog):
                 print('<<7⃣>>')
                 page7 = discord.Embed(title="Page 7/7", description="prefix:[y/]", color=0x5d00ff)
                 page7.add_field(name="**request <要望> <理由>**", value="リクエスト随時受付中です")
+                page7.add_field(name="**feedback <内容>**",value="フィートバックを送ります")
                 page7.add_field(name="**bug <不具合内容>**", value="不具合があれば教えてください")
                 page7.set_thumbnail(
                     url="https://images-ext-2.discordapp.net/external/svQAPh7v9BBNiUgs3Fx4e27C1yhQ1KMp5h1KOhkKH3U/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/757807145264611378/f6e2d7ff1f8092409983a77952670eae.png")

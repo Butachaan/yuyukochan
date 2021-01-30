@@ -44,8 +44,10 @@ class report(commands.Cog, name="report"):
             await channel.send(embed=embed)
         await ctx.send("ご協力ありがとうございます。")
 
-    @commands.command()
+    @commands.command(name="feedback")
     async def feedback(self, ctx, *, content: str):
+        """`誰でも`"""
+
         e = discord.Embed(title='Feedback', colour=0x738bd7)
         channel = self.bot.get_channel(759386170689585216)
         if channel is None:
