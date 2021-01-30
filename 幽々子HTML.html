@@ -52,7 +52,126 @@
   padding: 10px;
   text-align: center;
 }
-
+.cp_sidebarmenu {
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	width: 3.5em;
+	height: 100%;
+	-webkit-transition: width 0.6s ease;
+					transition: width 0.6s ease;
+	-webkit-transform: translateZ(0) scale(1,1);
+	border-right: 1px solid #e5e5e5;
+	background: #37474F;
+}
+.cp_sidebarmenu:hover {
+	overflow: visible;
+	width: 17em;
+}
+.cp_sidebarmenu ul {
+	margin: 7px 0;
+	padding: 0;
+	outline: 0;
+}
+.cp_sidebarmenu li {
+	position: relative;
+	display: block;
+	width: 17em;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+.cp_sidebarmenu li a {
+	position: relative;
+	display: table;
+	border-spacing: 0;
+	border-collapse: collapse;
+	text-decoration: none;
+	color: #ffffff;
+}
+.cp_sidebarmenu li:before {
+	content:"";
+	position: absolute;
+	top: 0px;
+	left: -17em;
+	height: 100%;
+	width: 17em;
+	background : rgba(240,98,146 ,0.5);
+	-webkit-transition: all 0.6s ease;
+					transition: all 0.6s ease;
+}
+.cp_sidebarmenu li:hover:before {
+	left:0;
+}
+.cp_sidebarmenu span {
+	position: relative;
+	display: table-cell;
+	width: 14em;
+	vertical-align: middle;
+}
+.cp_sidebarmenu > ul.control {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.cp_sidebarmenu ul li i {
+	font-size: 1.5em;
+	display: inline-block;
+	padding: 0.5em;
+	vertical-align: middle;
+}
+.cp_menu {
+	max-width: 360px;
+	margin: 0 auto;
+	padding: 0;
+}
+.cp_menu a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	color: #000000;
+	line-height: 1;
+}
+.cp_menu label {
+	display: block;
+	position: relative;
+	margin: 0 0 2px 0;
+	padding: 12px;
+	line-height: 1;
+	color: #ffffff;
+	background: #1b2538;
+	cursor: pointer;
+}
+.cp_menu label::before {
+	position: absolute;
+	content: '▼';
+	color: #ffffff;
+	right: 0.5em;
+	top: 25%;
+}
+.cp_menu input {
+	display: none;
+}
+.cp_menu ul {
+	margin: 0;
+	padding: 0;
+	background: #f4f4f4;
+	list-style: none;
+}
+.cp_menu li {
+	overflow-y: hidden;
+	max-height: 0;
+	transition: all 0.5s;
+}
+/*リストが増えたらULごとに追加してください*/
+#cp_menu_bar1:checked ~ #link1 li,
+#cp_menu_bar2:checked ~ #link2 li {
+	max-height: 46px;
+	opacity: 1;
+}
     </style>
     <style>
 
@@ -67,7 +186,35 @@
     はこちらへ</s>
     <img src="https://cdn.discordapp.com/avatars/757807145264611378/f6e2d7ff1f8092409983a77952670eae.png?size=1024">
     </div>
-
+    <nav class="cp_sidebarmenu">
+<ul>
+<li><a href="#"><i class="fa fa-home fa-2x fa-fw"></i><span>Menu1</span></a></li>
+<li><a href="#"><i class="fa fa-file-text fa-2x fa-fw"></i><span>Menu2</span></a></li>
+<li><a href="#"><i class="fa fa-comment fa-2x fa-fw"></i><span>Menu3</span></a></li>
+<li><a href="#"><i class="fa fa-share-alt fa-2x fa-fw"></i><span>Menu4</span></a></li>
+</ul>
+<div class="cp_menu">
+<label for="cp_menu_bar1">menu01</label>
+<input type="radio" name="radio" id="cp_menu_bar1" class="accordion" />
+<ul id="link1">
+	<li><a href="">link01</a></li>
+	<li><a href="">link02</a></li>
+	<li><a href="">link03</a></li>
+	<li><a href="">link04</a></li>
+</ul>
+<label for="cp_menu_bar2">menu02</label>
+<input type="radio" name="radio" id="cp_menu_bar2" class="accordion" />
+<ul id="link2">
+	<li><a href="">link01</a></li>
+	<li><a href="">link02</a></li>
+	<li><a href="">link03</a></li>
+	<li><a href="">link04</a></li>
+</ul>
+</div>
+<ul class="control">
+<li><a href="#"><i class="fa fa-cog fa-2x fa-fw"></i><span>Menu</span></a></li>
+</ul>
+</nav>
 <div class="l_toc">
     <h2>機能一覧</h2>
 
@@ -116,10 +263,11 @@
         </li>
     </ol>
 </div>
-
+<h1>iframe要素の使用例</h1>
+<iframe src="https://www.yuyuko-sv.xyz/"></iframe>
 <div class="connect">
 <h3>お問い合わせ</h3>
-<form action="cgi-bin/formmail.cgi" method="post">
+<form action="https://discord.gg/RU43TqGuCf" method="post">
 <p>
 名前：<input type="text" name="name" size="40">
 </p>
@@ -133,6 +281,14 @@
 <option value="B">B型</option>
 <option value="O">O型</option>
 <option value="AB">AB型</option>
+</select>
+</p>
+<p>
+    好きなものは？：<select name="blood">
+<option value="A">陸</option>
+<option value="B">海</option>
+<option value="O">空</option>
+<option value="AB">陸ステ</option>
 </select>
 </p>
 <p>
@@ -150,6 +306,31 @@
 <p>
 <input type="submit" value="送信"><input type="reset" value="リセット">
 </p>
+</form>
+<form>
+    <div class="wish">
+<h3>運営審査</h3>
+<p>
+名前：<input type="text" name="name" size="40">
+</p>
+        <p>
+       意気込み：<br>
+<textarea name="kanso" rows="4" cols="40"></textarea>
+</p>
+        <p>
+希望担当課:<select name="tanntou">
+    <option value="developer">開発者</option>
+    <option value="admin">サーバー管理</option>
+    <option value="web">web管理</option>
+            <option value="BugHunter">bug報告</option>
+
+
+</select>
+</p>
+        <p>
+<input type="submit" value="送信"><input type="reset" value="リセット">
+</p>
+
 </form>
 
 </body>
